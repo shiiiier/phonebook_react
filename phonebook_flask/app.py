@@ -23,8 +23,8 @@ class Users(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     # primary key is always unique
     name = db.Column(db.String(100), nullable = False)
-    phoneNumber = db.Column(db.String(100), nullable = False)
-    # phoneNumber = db.Column(db.Integer, nullable = False)
+    # phoneNumber = db.Column(db.String(100), nullable = False)
+    phoneNumber = db.Column(db.Integer, nullable = False)
 
     def __repr__(self):
         return f"User ('{self.id}','{self.name}', '{self.phoneNumber}')"

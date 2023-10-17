@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function EditUser() {
   const navigate = useNavigate();
@@ -42,7 +45,17 @@ export default function EditUser() {
 
         navigate("/");
       });
-    alert("Successfully Updated");
+
+    toast("Contact updated!",{
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        })
   };
 
   return (

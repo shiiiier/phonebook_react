@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { nanoid } from "nanoid";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CreateUser = () => {
   const navigate = useNavigate();
@@ -19,9 +20,19 @@ const CreateUser = () => {
     axios
       .post(`http://127.0.0.1:5000/useradd`, inputs)
       .then(function (response) {
-        console.log(response.data);
         navigate("/");
       });
+
+    toast("Contact added!",{
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      })
   };
 
   return (
@@ -59,6 +70,7 @@ const CreateUser = () => {
         </div>
       </div>
     </div>
+    <ToastContainer />
     </div>
   );
 };
