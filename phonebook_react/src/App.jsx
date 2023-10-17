@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import ViewUser from './pages/ViewUser'
 import { Route, Routes } from "react-router-dom"
 import EditUser from './pages/EditUser'
-import ScrollToTop from "react-scroll-to-top";
+import ScrollToTop from "react-scroll-to-top"
 
 const App = () => {
 

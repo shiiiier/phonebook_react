@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1600px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -36,7 +36,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
-  padding-right: 30px;
+  padding-right: 50px;
 }
 
 .nav a {
@@ -119,4 +119,8 @@ label {
   font-size: larger;
   font-weight: 500;
   text-align: left;
+}
+
+#circle_animation {
+  width: 15%;
 }
